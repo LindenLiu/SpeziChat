@@ -25,7 +25,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/StanfordSpezi/SpeziFoundation", from: "2.0.1"),
         .package(url: "https://github.com/StanfordSpezi/SpeziSpeech", from: "1.1.1"),
-        .package(url: "https://github.com/StanfordSpezi/SpeziViews", from: "1.8.0")
+        .package(url: "https://github.com/StanfordSpezi/SpeziViews", from: "1.8.0"),
+        .package(url: "https://github.com/gonzalezreal/swift-markdown-ui", from: "2.0.2")
     ],
     targets: [
         .target(
@@ -34,7 +35,8 @@ let package = Package(
                 .product(name: "SpeziFoundation", package: "SpeziFoundation"),
                 .product(name: "SpeziSpeechRecognizer", package: "SpeziSpeech"),
                 .product(name: "SpeziSpeechSynthesizer", package: "SpeziSpeech"),
-                .product(name: "SpeziViews", package: "SpeziViews")
+                .product(name: "SpeziViews", package: "SpeziViews"),
+                .product(name: "MarkdownUI", package: "swift-markdown-ui")
             ]
         ),
         .testTarget(

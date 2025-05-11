@@ -42,6 +42,7 @@ struct ChatTestView: View {
                             
                             await MainActor.run {
                                 chat.append(.init(role: .assistantToolResponse, content: "{ some: response }"))
+                              chat.append(.init(role: .user, content: "Markdown image: ![picnic](https://photos.tryotter.com/cdn-cgi/image/fit=crop,width=80,height=60,quality=60,format=auto/menu-photos/ea4dd323-b90e-47c8-abd4-07fe54e95956.jpeg)"))
                             }
                             try await Task.sleep(for: .seconds(1))
                         }
